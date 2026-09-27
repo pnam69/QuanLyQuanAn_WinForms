@@ -1,0 +1,32 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace QuanLyQuanAn_WinForms.Models
+{
+    [Index(nameof(MaDon), IsUnique = true)]
+    public class DonHang
+    {
+        [Key]
+        public int MaDon { get; set; }
+
+        public int? MaBan { get; set; }
+
+        public int MaNV { get; set; }
+
+        public DateTime NgayLap { get; set; } = DateTime.Now;
+
+        public decimal TongTien { get; set; }
+
+        [StringLength(30)]
+        public string TrangThai { get; set; } = "Đang phục vụ";
+
+        public Ban? Ban { get; set; }
+
+        public NhanVien? NhanVien { get; set; }
+
+        public ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
+            = new List<ChiTietDonHang>();
+
+        public ThanhToan? ThanhToan { get; set; }
+    }
+}

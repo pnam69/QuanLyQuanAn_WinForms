@@ -1,0 +1,86 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio generated files
+*.pdb
+*.ilk
+*.idb
+*.ipch
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Test results
+TestResults/
+*.trx
+
+# Code coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Rider / ReSharper
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# VS Code
+.vscode/
+
+# Publish output
+publish/
+wwwroot/lib/
+
+# Entity Framework / local database files
+*.mdf
+*.ldf
+*.ndf
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Windows Forms generated files
+*.resx.bak
+
+# User-specific configuration
+appsettings.Local.json
+appsettings.Development.Local.json
+
+# Secrets
+secrets.json
+secrets.*.json
+
+# Backup files
+*.bak
+*.backup
