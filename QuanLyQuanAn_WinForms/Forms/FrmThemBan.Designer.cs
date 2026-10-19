@@ -1,4 +1,7 @@
-﻿namespace QuanLyQuanAn_WinForms.Forms
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace QuanLyQuanAn_WinForms.Forms
 {
     partial class FrmThemBan
     {
@@ -28,106 +31,145 @@
         /// </summary>
         private void InitializeComponent()
         {
-            numSoGhe = new NumericUpDown();
-            lblSoGhe = new Label();
-            txtSoBan = new TextBox();
+            label1 = new Label();
             lblSoBan = new Label();
+            txtSoBan = new TextBox();
+            lblSoGhe = new Label();
+            numSoGhe = new NumericUpDown();
+            label2 = new Label();
+            cboTang = new ComboBox();
             btnThem = new Button();
             btnHuy = new Button();
-            label1 = new Label();
-            cboTang = new ComboBox();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)numSoGhe).BeginInit();
             SuspendLayout();
             // 
-            // numSoGhe
+            // label1 (Tiêu đề Header)
             // 
-            numSoGhe.Location = new Point(137, 94);
-            numSoGhe.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
-            numSoGhe.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numSoGhe.Name = "numSoGhe";
-            numSoGhe.Size = new Size(150, 27);
-            numSoGhe.TabIndex = 22;
-            numSoGhe.ThousandsSeparator = true;
-            numSoGhe.Value = new decimal(new int[] { 4, 0, 0, 0 });
+            label1.AutoSize = false;
+            label1.BackColor = Color.FromArgb(30, 41, 59);
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(380, 48);
+            label1.TabIndex = 25;
+            label1.Text = "➕ THÊM BÀN ĂN MỚI";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblSoGhe
+            // lblSoBan (Nhãn Số bàn)
             // 
-            lblSoGhe.AutoSize = true;
-            lblSoGhe.Location = new Point(12, 96);
-            lblSoGhe.Name = "lblSoGhe";
-            lblSoGhe.Size = new Size(55, 20);
-            lblSoGhe.TabIndex = 21;
-            lblSoGhe.Text = "Số ghế";
+            lblSoBan.AutoSize = true;
+            lblSoBan.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSoBan.ForeColor = Color.FromArgb(51, 65, 85);
+            lblSoBan.Location = new Point(28, 70);
+            lblSoBan.Name = "lblSoBan";
+            lblSoBan.Size = new Size(89, 23);
+            lblSoBan.TabIndex = 19;
+            lblSoBan.Text = "Tên số bàn:";
             // 
             // txtSoBan
             // 
-            txtSoBan.Location = new Point(137, 45);
+            txtSoBan.BackColor = Color.White;
+            txtSoBan.BorderStyle = BorderStyle.FixedSingle;
+            txtSoBan.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSoBan.ForeColor = Color.FromArgb(15, 23, 42);
+            txtSoBan.Location = new Point(140, 67);
             txtSoBan.Name = "txtSoBan";
-            txtSoBan.Size = new Size(150, 27);
+            txtSoBan.Size = new Size(205, 30);
             txtSoBan.TabIndex = 20;
             // 
-            // lblSoBan
+            // lblSoGhe (Nhãn Số ghế)
             // 
-            lblSoBan.AutoSize = true;
-            lblSoBan.Location = new Point(12, 48);
-            lblSoBan.Name = "lblSoBan";
-            lblSoBan.Size = new Size(55, 20);
-            lblSoBan.TabIndex = 19;
-            lblSoBan.Text = "Số bàn";
+            lblSoGhe.AutoSize = true;
+            lblSoGhe.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSoGhe.ForeColor = Color.FromArgb(51, 65, 85);
+            lblSoGhe.Location = new Point(28, 118);
+            lblSoGhe.Name = "lblSoGhe";
+            lblSoGhe.Size = new Size(67, 23);
+            lblSoGhe.TabIndex = 21;
+            lblSoGhe.Text = "Số ghế:";
             // 
-            // btnThem
+            // numSoGhe
             // 
-            btnThem.Location = new Point(35, 235);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(94, 29);
-            btnThem.TabIndex = 23;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = true;
-            btnThem.Click += btnThem_Click;
+            numSoGhe.BackColor = Color.White;
+            numSoGhe.BorderStyle = BorderStyle.FixedSingle;
+            numSoGhe.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            numSoGhe.ForeColor = Color.FromArgb(15, 23, 42);
+            numSoGhe.Location = new Point(140, 115);
+            numSoGhe.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
+            numSoGhe.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numSoGhe.Name = "numSoGhe";
+            numSoGhe.Size = new Size(205, 30);
+            numSoGhe.TabIndex = 22;
+            numSoGhe.TextAlign = HorizontalAlignment.Center;
+            numSoGhe.ThousandsSeparator = true;
+            numSoGhe.Value = new decimal(new int[] { 4, 0, 0, 0 });
             // 
-            // btnHuy
+            // label2 (Nhãn Tầng / Khu vực)
             // 
-            btnHuy.Location = new Point(178, 235);
-            btnHuy.Name = "btnHuy";
-            btnHuy.Size = new Size(94, 29);
-            btnHuy.TabIndex = 24;
-            btnHuy.Text = "Hủy";
-            btnHuy.UseVisualStyleBackColor = true;
-            btnHuy.Click += btnHuy_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(118, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 20);
-            label1.TabIndex = 25;
-            label1.Text = "Thêm bàn";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(51, 65, 85);
+            label2.Location = new Point(28, 166);
+            label2.Name = "label2";
+            label2.Size = new Size(95, 23);
+            label2.TabIndex = 27;
+            label2.Text = "Thuộc tầng:";
             // 
             // cboTang
             // 
+            cboTang.BackColor = Color.White;
             cboTang.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTang.FlatStyle = FlatStyle.Standard;
+            cboTang.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboTang.ForeColor = Color.FromArgb(15, 23, 42);
             cboTang.FormattingEnabled = true;
-            cboTang.Location = new Point(136, 149);
+            cboTang.Location = new Point(140, 163);
             cboTang.Name = "cboTang";
-            cboTang.Size = new Size(151, 28);
+            cboTang.Size = new Size(205, 31);
             cboTang.TabIndex = 26;
             // 
-            // label2
+            // btnThem (Nút Thêm)
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 152);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 20);
-            label2.TabIndex = 27;
-            label2.Text = "Tầng";
+            btnThem.BackColor = Color.FromArgb(16, 185, 129);
+            btnThem.Cursor = Cursors.Hand;
+            btnThem.FlatAppearance.BorderSize = 0;
+            btnThem.FlatStyle = FlatStyle.Flat;
+            btnThem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnThem.ForeColor = Color.White;
+            btnThem.Location = new Point(52, 222);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(130, 38);
+            btnThem.TabIndex = 23;
+            btnThem.Text = "✔ Thêm mới";
+            btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
+            // 
+            // btnHuy (Nút Hủy)
+            // 
+            btnHuy.BackColor = Color.FromArgb(100, 116, 139);
+            btnHuy.Cursor = Cursors.Hand;
+            btnHuy.FlatAppearance.BorderSize = 0;
+            btnHuy.FlatStyle = FlatStyle.Flat;
+            btnHuy.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHuy.ForeColor = Color.White;
+            btnHuy.Location = new Point(198, 222);
+            btnHuy.Name = "btnHuy";
+            btnHuy.Size = new Size(130, 38);
+            btnHuy.TabIndex = 24;
+            btnHuy.Text = "✖ Hủy bỏ";
+            btnHuy.UseVisualStyleBackColor = false;
+            btnHuy.Click += btnHuy_Click;
             // 
             // FrmThemBan
             // 
+            AcceptButton = btnThem;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(335, 276);
+            BackColor = Color.FromArgb(241, 245, 249);
+            CancelButton = btnHuy;
+            ClientSize = new Size(380, 285);
             Controls.Add(label2);
             Controls.Add(cboTang);
             Controls.Add(label1);
@@ -137,8 +179,12 @@
             Controls.Add(lblSoGhe);
             Controls.Add(txtSoBan);
             Controls.Add(lblSoBan);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmThemBan";
-            Text = "FrmThemBan";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Thêm bàn mới";
             ((System.ComponentModel.ISupportInitialize)numSoGhe).EndInit();
             ResumeLayout(false);
             PerformLayout();
