@@ -68,7 +68,8 @@ namespace QuanLyQuanAn_WinForms
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-
+            using var frm = new FrmThongKe();
+            frm.ShowDialog();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
