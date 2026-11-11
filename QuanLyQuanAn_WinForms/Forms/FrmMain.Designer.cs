@@ -33,6 +33,7 @@ namespace QuanLyQuanAn_WinForms
         {
             pnlMenu = new Panel();
             lblXinChao = new Label();
+            pnlContent = new Panel();
             lblVaiTro = new Label();
             btnDangXuat = new Button();
             btnThongKe = new Button();
@@ -50,6 +51,7 @@ namespace QuanLyQuanAn_WinForms
             // 
             pnlMenu.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlMenu.BackColor = Color.FromArgb(241, 245, 249);
+            pnlMenu.Controls.Add(pnlContent);
             pnlMenu.Controls.Add(lblXinChao);
             pnlMenu.Controls.Add(lblVaiTro);
             pnlMenu.Controls.Add(btnDangXuat);
@@ -231,6 +233,16 @@ namespace QuanLyQuanAn_WinForms
             lblXinChao.Text = "👋 Chào mừng đến với Hệ thống Quản lý Quán ăn";
             lblXinChao.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // pnlContent (Panel dùng để nhúng các Form con)
+            // 
+            pnlContent.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlContent.BackColor = Color.FromArgb(241, 245, 249);
+            pnlContent.Location = new Point(24, 146);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(908, 386);
+            pnlContent.TabIndex = 12;
+            pnlContent.Visible = false;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -261,5 +273,6 @@ namespace QuanLyQuanAn_WinForms
         private Button btnTrangChu;
         private Label lblVaiTro;
         private Label lblXinChao;
+        private Panel pnlContent;
     }
 }

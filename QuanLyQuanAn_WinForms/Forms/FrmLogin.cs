@@ -62,15 +62,10 @@ namespace QuanLyQuanAn_WinForms
             CurrentUser.HoTen = nhanVien.HoTen;
             CurrentUser.TaiKhoan = nhanVien.TaiKhoan;
             CurrentUser.VaiTro = nhanVien.VaiTro;
-
-            Hide();
-
-            using (var frmMain = new FrmMain())
-            {
-                frmMain.ShowDialog();
-            }
-
-            Show();
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.FormClosed += (sender, args) => this.Show();
+            frmMain.Show();
         }
 
         private void chkHienMatKhau_CheckedChanged(object sender, EventArgs e)

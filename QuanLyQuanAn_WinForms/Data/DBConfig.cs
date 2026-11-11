@@ -7,6 +7,6 @@ namespace QuanLyQuanAn_WinForms.Data
     public static class DbConfig
     {
         public static string ConnectionString =
-            "Server=localhost;Database=QuanLyQuanAn;Trusted_Connection=True;TrustServerCertificate=True;";
+            "Server=(localdb)\\MSSQLLocalDB;Database=QuanLyQuanAn;Trusted_Connection=True;TrustServerCertificate=True;";
     }
 }
